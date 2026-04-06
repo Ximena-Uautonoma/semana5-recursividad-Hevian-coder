@@ -11,11 +11,26 @@ def suma_ciclo(n):
     """
     Retorna la suma de los primeros n números usando un ciclo.
     """
-    pass
+    y = n
+    x = 1
+    while y != 1:
+        n = n + x
+        x = x + 1
+        y = y-1
+    return print(n)
+    
+
 
 
 def suma_recursiva(n):
     """
     Retorna la suma de los primeros n números usando recursividad.
     """
-    pass
+    if n == 1:
+        return 1
+    else:
+        return n + suma_recursiva(n - 1)
+
+suma_ciclo(5)
+print("recursiva: ")
+print(suma_recursiva(5))
